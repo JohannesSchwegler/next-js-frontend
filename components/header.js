@@ -6,7 +6,7 @@ export default function Header() {
         <div className="w-full md:w-1/2">
           <Link href="/">
             <a>
-              <img class="h-12 w-32" src="/logo.svg" alt="Logo" />
+              <img class="h-12 w-16" src="/logo.svg" alt="Logo" />
             </a>
           </Link>
         </div>
@@ -24,6 +24,11 @@ export default function Header() {
                 <a class="text-grey-500" target="_blank" rel="noopener">
                   How it works?
                 </a>
+              </Link>
+            </li>
+            <li class="mr-6">
+              <Link href="/dashboard/start">
+                <a class="text-grey-500">Dashboard</a>
               </Link>
             </li>
             <li class="mr-6">

@@ -31,6 +31,7 @@ module.exports = {
         "primary-blue": "#005eff",
         "secondary-blue": "#6ea3ff",
         "gray-50": "#f9fafb;",
+        sidebar: "#3d68ff",
       }),
       fontFamily: {
         regular: "Camphor Regular",

@@ -10,9 +10,9 @@ export default function Index() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <div className={styles["tt-hero"]}>
+        <div className={`${styles["tt-hero"]} bg-gray-50`}>
           <div className="container mx-auto flex">
-            <div class="flex-1 flex justify-center flex-col">
+            <div class="flex-1 flex justify-center flex-col relative">
               <h1 className="text-2xl md:text-5xl font-bold text-dark mb-3 leading-tight">
                 Manage your Profit <br />
                 and feel future is real <br />
@@ -39,14 +39,15 @@ export default function Index() {
                   <span>Watch demo</span>
                 </button>
               </div>
-            </div>
-            <div class="flex-1 ">
-              <img className="w-50" src="/circle.svg" />
+              <img
+                className="w-3/4 left-0 right-0 mx-auto absolute translate-y-6"
+                src="https://finezjo.pl/src/assets/images/Bitmap.png"
+              />
             </div>
           </div>
         </div>
 
-        <div class="h-40vh flex items-center text-center bg-gray-50 ">
+        <div class="h-40vh flex items-center text-center  ">
           <div className="w-full">
             <p className="uppercase text-gray-600">What do you think</p>
             <h1 className="text-4xl">
@@ -58,7 +59,7 @@ export default function Index() {
         </div>
 
         {/*-----------------------------------------*/}
-        <section className="bg-gray-50">
+        <section className="">
           <div class="container mx-auto  relative py-12 lg:pt-12 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
             <div class="relative">
               <h4 class="text-2xl leading-8 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9">
@@ -239,7 +240,7 @@ export default function Index() {
           </div>
         </section>
 
-        <section className="bg-gray-50">
+        <section className="">
           <div class=" container mx-auto relative py-12 sm:pt-16 lg:pt-16">
             <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
               <div class="lg:col-start-2">
