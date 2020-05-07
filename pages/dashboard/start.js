@@ -1,8 +1,24 @@
 import DashboardLayout from "../../components/dashboard-layout";
 
-export default function Start() {
+import { getAllArticles } from "../../lib/articles";
+
+export default function Start({ allPostsData }) {
+  console.log(allPostsData);
   return (
     <DashboardLayout>
+      {allPostsData.map((item) => {
+        return (
+          <div class="w-1/2 mb-10 bg-white p-5 flex">
+            <div>
+              <img className="w-32 h-32 object-cover" src={item.image} />
+            </div>
+            <div class="flex-1 ml-5">
+              <h1 className="text-2xl ">{item.title}</h1>
+              <h1>{item.content}</h1>
+            </div>
+          </div>
+        );
+      })}
       <h1 class="text-3xl text-black pb-6">Tabbed Content</h1>
 
       <div class="w-full mt-6" x-data="{ openTab: 1 }">
@@ -80,4 +96,13 @@ export default function Start() {
       </div>
     </DashboardLayout>
   );
+}
+
+export async function getStaticProps() {
+  const allPostsData = await getAllArticles();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
 }
