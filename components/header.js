@@ -1,4 +1,6 @@
 import Link from "next/link";
+// AOS
+import AOS from "aos";
 export default function Header() {
   return (
     <header className="w-full absolute top-20 px-16">
@@ -32,10 +34,8 @@ export default function Header() {
               </Link>
             </li>
             <li class="mr-6">
-              <Link href="">
-                <a class="text-grey-500" target="_blank" rel="noopener">
-                  Plan
-                </a>
+              <Link href="/register">
+                <a class="text-grey-500">Register</a>
               </Link>
             </li>
             <li class="mr-6">
